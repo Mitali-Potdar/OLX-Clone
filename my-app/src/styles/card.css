@@ -1,0 +1,32 @@
+/* card css */
+.view-button {
+    margin-left: 1.5px;
+    line-height: 0.95;
+}
+
+.card-image-container {
+    overflow: hidden;
+}
+
+.card-image-container img {
+    width: 100%;
+    transition: 0.2s;
+}
+
+.card-image-container:hover img {
+    transform: scale(1.05);
+}
+
+.wishlist-icon {
+    position: absolute;
+    right: 4%;
+    top: 4%;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.wishlist-icon:hover {
+    color: red;
+}
+
+/* -------------------------------------------- */

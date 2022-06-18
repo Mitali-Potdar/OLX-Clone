@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.body {
+  padding: 100px;
+  font-family: Montserrat;
+  font-weight: 600;
+  background-color: #1b1b1b;
+  color: #f0f0f0;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-name {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.share-like {
+  display: flex;
+  grid-gap: 30px;
+}
+.share-save {
+  display: flex;
+  grid-gap: 10px;
+  color: white;
+  align-items: center;
+}
+
+.share-save:hover {
+  cursor: pointer;
+}
+
+.gallery-padding {
+  padding-bottom: 25px;
+}
+
+.sub-heading {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 25px;
+}
+
+.all-info {
+  display: flex;
+  grid-gap: 25px;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.details {
+  padding-top: 20px;
+}
+.product-info {
+  width: 60%;
+}
+
+.product-card {
+  padding: 30px;
+  align-content: center;
+  border-radius: 15px;
+  width: 35%;
+  background-color: rgb(138, 88, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+}
+
+.amount {
+  display: flex;
+  justify-content: center;
+  grid-gap: 9px;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 3px solid black;
+}
+.rupee-icon {
+  height: 50px;
+  width: 50px;
+}
+.seller {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.seller:hover {
+  cursor: pointer;
+}
+.seller:hover .arrow {
+  cursor: pointer;
+  color: #f3f3f3;
+}
+.seller-prof {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.btn-align {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+}
+.button {
+  border-radius: 12px;
+  padding: 10px 15px;
+  align-items: center;
+  font-size: 18px;
+  background-color: white;
+}
+.button:hover {
+  background-color: rgb(216, 216, 216);
+  cursor: pointer;
+}
+
+.card-top {
+  background-color: black;
+}
+
+@media (max-width: 885px) {
+  .all-info {
+    display: block;
+    padding-top: 10px;
+  }
+  .product-info {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 648px) {
+  .body {
+    padding: 50px;
+  }
+  .product-name {
+    font-size: 25px;
+  }
+  .sub-heading {
+    font-size: 20px;
+  }
+
+  .gallery {
+    padding-bottom: 20px;
+  }
+}
