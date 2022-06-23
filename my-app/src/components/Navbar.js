@@ -8,7 +8,7 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
   return (
-    <div className="header">
+    <div className="top-header">
       <div className="logo-container">
         <a href="/">
           <img src={Logo} alt="logo" className="logo" />
