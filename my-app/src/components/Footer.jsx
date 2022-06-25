@@ -74,11 +74,11 @@ const Footer = () => {
 
       <div class="row copyright">
         <div class="footer-menu">
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
-          <a href="">Blog</a>
-          <a href="">Social</a>
+          <a href="/">Home</a>
+          <a href="/">About</a>
+          <a href="/">Contact</a>
+          <a href="/">Blog</a>
+          <a href="/">Social</a>
         </div>
         <p button className="p-footer">
           Copyright &copy; 2022 OLX
