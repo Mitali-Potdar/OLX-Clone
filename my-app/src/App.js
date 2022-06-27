@@ -8,6 +8,7 @@ import CarousalLanding from "./components/Carousal";
 import Filler from "./components/Filler";
 import CarouselFiller from "./components/carouselFiller";
 import Footer from "./components/Footer";
+import ScrollButton from "./components/ScrollButton";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <CarouselFiller />
       <Filler />
       <Footer />
+      <ScrollButton />
     </Router>
   );
 }

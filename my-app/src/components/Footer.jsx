@@ -1,12 +1,17 @@
 import React from "react";
 import "../styles/Footer.css";
+import Logo from "../images/logo.svg";
 
 const Footer = () => {
   return (
     <footer>
       <div className="row-footer primary">
         <div className="column-footer about-footer">
-          <h3>OLX</h3>
+        <div className="logo-container">
+        <a href="/">
+          <img src={Logo} alt="logo" className="logo" />
+        </a>
+      </div>
 
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
@@ -72,7 +77,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div class="row copyright">
+      <div class="row-copyright">
         <div class="footer-menu">
           <a href="">Home</a>
           <a href="">About</a>
@@ -80,9 +85,9 @@ const Footer = () => {
           <a href="">Blog</a>
           <a href="">Social</a>
         </div>
-        <p button className="p-footer">
+        <div className="p-footer">
           Copyright &copy; 2022 OLX
-        </p>
+        </div>
       </div>
     </footer>
   );
