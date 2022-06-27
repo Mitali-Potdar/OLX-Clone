@@ -80,29 +80,29 @@ p {
   grid-gap: 30px;
   align-items: center;
 }
-.nav-name:hover {
-  color: #c8c8c8;
-}
+
 .nav-name {
   color: white;
+  display: none;
+  transition: all 0.2s linear;
 }
 .login:hover {
-  color: #c8c8c8;
+  transform: scale(1.2);
 }
 .login {
   padding-left: 10px;
   color: #fff;
+  transition: all 0.2s linear;
 }
-.nav-name {
-  display: none;
-}
+
 .nav-icon {
-  height: 25px;
-  width: 25px;
+  height: 26px;
+  width: 26px;
   color: white;
+  transition: all 0.2s linear;
 }
 .nav-icon:hover {
-  color: #c8c8c8;
+  transform: scale(1.25);
 }
 .dashbtn {
   cursor: pointer;
@@ -153,10 +153,12 @@ p {
   background: #4d23af;
   color: white;
   cursor: pointer;
+  transition: all 0.2s linear;
 }
 .sell-btn:hover {
-  background: rgb(138, 88, 255);
+  background: rgb(115, 69, 221);
   color: black;
+  transform: scale(1.15);
 }
 .mobile-menu {
   display: none;
@@ -214,10 +216,7 @@ p {
     display: block;
   }
   .nav-name:hover {
-    color: rgb(200, 200, 200);
-  }
-  .login:hover {
-    color: rgb(200, 200, 200);
+    transform: scale(1.2);
   }
   .nav-icon {
     display: none;
