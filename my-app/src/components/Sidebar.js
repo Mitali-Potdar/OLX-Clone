@@ -7,7 +7,7 @@ import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 
 const Nav = styled.div`
-  background: black;
+  background: pink;
   height: 50px;
   display: flex;
   justify-content: flex-start;
