@@ -12,7 +12,6 @@ const Footer = () => {
           <img src={Logo} alt="logo" className="logo" />
         </a>
       </div>
-
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
             voluptatem corporis error non,
@@ -27,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div class="column links">
+        <div class="column-links">
           <h3 className="h3-footer">Some Links</h3>
 
           <ul className="ul-footer">
@@ -46,7 +45,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div class="column links">
+        <div class="column-links">
           <h3 className="h3-footer">Some Links</h3>
           <ul className="ul-footer">
             <li>
@@ -64,7 +63,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div class="column subscribe">
+        <div class="column-subscribe">
           <h3 className="h3-footer">Newsletter</h3>
           <div>
             <input 
