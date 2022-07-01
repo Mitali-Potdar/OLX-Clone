@@ -284,7 +284,7 @@ export const SidebarData = [
     subNav: [
       {
         title: "Novels",
-        path: "//novels"
+        path: "/recreational/novels"
       },
     ]
   }
