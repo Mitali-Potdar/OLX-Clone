@@ -39,7 +39,6 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
-
     activateEmail: async (req, res) => {
         try {
             const {activation_token} = req.body
@@ -62,7 +61,6 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
-
     login: async (req, res) => {
         try {
             const {email, password} = req.body
@@ -84,7 +82,6 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
-
     getAccessToken: (req, res) => {
         try {
             const rf_token = req.cookies.refreshtoken
@@ -96,6 +93,36 @@ const userCtrl = {
                 const access_token = createAccessToken({id: user.id})
                 res.json({access_token})
             })
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    forgotPassword: async (req, res) => {
+        try {
+            const {email} = req.body
+            const user = await Users.findOne({email})
+            if(!user) return res.status(400).json({msg: "This email does not exist."})
+
+            const access_token = createAccessToken({id: user._id})
+            const url = `${CLIENT_URL}/user/reset/${access_token}`
+
+            sendMail(email, url, "Reset your password")
+            res.json({msg: "Please check your email to reset the password."})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    resetPassword: async (req, res) => {
+        try {
+            const {password} = req.body
+            
+            const passwordHash = await bcrypt.hash(password, 12)
+
+            await Users.findOneAndUpdate({_id: req.user.id}, {
+                password: passwordHash
+            })
+
+            res.json({msg: "Password successfully changed!"})
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }
