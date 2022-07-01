@@ -127,6 +127,33 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
+    getUserInfor: async (req, res) => {
+        try {
+            const user = await Users.findById(req.user.id).select('-password')
+
+            res.json(user)
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    //Not sure of the need
+    // getUsersAllInfor: async (req, res) => {
+    //     try {
+    //         const users = await Users.find().select('-password')
+
+    //         res.json(users)
+    //     } catch (err) {
+    //         return res.status(500).json({msg: err.message})
+    //     }
+    // },
+    logout: async (req, res) => {
+        try {
+            res.clearCookie('refreshtoken', {path: '/user/refresh_token'})
+            return res.json({msg: "Logged out."})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
 }
 
 function validateEmail(email) {
