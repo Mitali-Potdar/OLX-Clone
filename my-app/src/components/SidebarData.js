@@ -90,7 +90,7 @@ export const SidebarData = [
   },
 
   {
-    title: "Sports & Outdoor:",
+    title: "Sports & Outdoor",
     path: "/sportsandoutdoor",
     icon: <AiIcons.AiOutlineLaptop />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -114,5 +114,180 @@ export const SidebarData = [
         path: "/sportsandoutdoor/gymequipments"
       }
     ]
+  },
+
+  {
+    title: "Stationary and Academic Supplies",
+    path: "/stationaryandacademicsupplies",
+    icon: <AiIcons.AiOutlineLaptop />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+   
+    subNav: [
+      {
+        title: "Books",
+        path: "/stationaryandacademicsupplies/books"
+      },
+      {
+        title: "Bags",
+        path: "/stationaryandacademicsupplies/bags"
+      },
+      {
+        title: "Labcoat",
+        path: "/stationaryandacademicsupplies/labcoat"
+      },
+      {
+        title: "Calculator",
+        path: "/stationaryandacademicsupplies/calculator"
+      },
+      {
+        title: "Drawing and Civil",
+        path: "/stationaryandacademicsupplies/drawingandcivil"
+      },
+      {
+        title: "Umbrella",
+        path: "/stationaryandacademicsupplies/umbrella"
+      },
+      {
+        title: "Others",
+        path: "/stationaryandacademicsupplies/others"
+      },
+    ]
+    },
+    {
+      title: "Clothing and Footwear",
+      path: "/clothingandfootwear",
+      icon: <AiIcons.AiOutlineLaptop />,
+      iconClosed: <RiIcons.RiArrowDownSFill />,
+      iconOpened: <RiIcons.RiArrowUpSFill />,
+
+      subNav: [
+        {
+          title: "Dresses",
+          path: "/clothingandfootwear/dressess"
+        },
+        {
+          title: "T-shirts and Shirts",
+          path: "/clothingandfootwear/tshirtsandshirts"
+        },
+        {
+          title: "Jeans and demins",
+          path: "/clothingandfootwear/jeansanddenims"
+        },
+        {
+          title: "Jackets",
+          path: "/clothingandfootwear/jackets"
+        },
+        {
+          title: "Shorts",
+          path: "/clothingandfootwear/shorts"
+        },
+        {
+          title: "Skirts",
+          path: "/clothingandfootwear/skirts"
+        },
+        {
+          title: "Sweater and Sweatshirts",
+          path: "/clothingandfootwear/sweaterandsweatshirts"
+        },
+        {
+          title: "Formals",
+          path: "/clothingandfootwear/formals"
+        },
+        {
+          title: "Ethnic Wear",
+          path: "/clothingandfootwear/ethnicwear"
+        },
+        {
+          title: "Sports Apparel",
+          path: "/clothingandfootwear/sports apparel"
+        },
+        {
+          title: " Flipflops and Flats",
+          path: "/clothingandfootwear/flipflopsandflats"
+        },
+        {
+          title: "Heels",
+          path: "/clothingandfootwear/heels"
+        },
+        {
+          title: "Shoes",
+          path: "/clothingandfootwear/shoes"
+        },  
+      ]
+    },
+    {
+      title: "Fashion Accessories",
+      path: "/fashionaccessories",
+      icon: <AiIcons.AiOutlineLaptop />,
+      iconClosed: <RiIcons.RiArrowDownSFill />,
+      iconOpened: <RiIcons.RiArrowUpSFill />,
+
+      
+    subNav: [
+      {
+        title: "Jewellery",
+        path: "/fashionaccessories/jewellery"
+      },
+      {
+        title: "Wallets and Clutches",
+        path: "/fashionaccessories/walletsandclutches"
+      },
+      {
+        title: "Watches",
+        path: "/fashionaccessories/watches"
+      },
+      {
+        title: "Belts and Tie",
+        path: "/fashionaccessories/beltsandtie"
+      },
+      {
+        title: "Hand bags",
+        path: "/fashionaccessories/handbags"
+      },
+      {
+        title: "Sunglasses",
+        path: "/fashionaccessories/sunglasses"
+      },
+      {
+        title: "Hair Accessories",
+        path: "/fashionaccessories/hairaccessories"
+      },
+      {
+        title: "Caps and Hats",
+        path: "/fashionaccessories/capsandhats"
+      },
+      {
+        title: "Scarves and Gloves",
+        path: "/fashionaccessories/scarvesandgloves"
+      },
+      {
+        title: "Phone Accessories",
+        path: "/fashionaccessories/phoneaccessories"
+      },
+      {
+        title: "Others",
+        path: "/fashionaccessories/others"
+      },
+    ]
+
+    },
+
+    {
+      title: "Recreational",
+      path: "/recreational",
+      icon: <AiIcons.AiOutlineLaptop />,
+      iconClosed: <RiIcons.RiArrowDownSFill />,
+      iconOpened: <RiIcons.RiArrowUpSFill />,
+
+      
+    subNav: [
+      {
+        title: "Novels",
+        path: "//novels"
+      },
+    ]
   }
+
+
 ];
