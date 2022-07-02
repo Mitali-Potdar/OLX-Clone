@@ -16,13 +16,13 @@ function App() {
     <Router>
       <Navbar />
       <Body />
-      <Sidebar />
+      {/* <Sidebar />
       <CarousalLanding />
       <CardList />
       <CarouselFiller />
       <Filler />
       <Footer />
-      <ScrollButton />
+      <ScrollButton /> */}
     </Router>
   );
 }

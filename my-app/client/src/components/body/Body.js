@@ -19,10 +19,10 @@ function Body() {
     // const auth = useSelector(state => state.auth)
     // const {isLogged} = auth
     return (
-        <section>
+        
             <Routes>
                 {/* <Route path="/" component={Home} exact /> */}
-                <Route path="/login" component={Login} exact />
+                <Route path="/login" element={<Login/>} exact/>
                 {/* <Route path="/login" component={isLogged ? NotFound : Login} exact /> */}
                 {/* <Route path="/register" component={isLogged ? NotFound : Register} exact />
 
@@ -35,7 +35,7 @@ function Body() {
                 <Route path="/edit_user/:id" component={isAdmin ? EditUser : NotFound} exact /> */}
 
             </Routes>
-        </section>
+        
     )
 }
 

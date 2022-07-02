@@ -11,7 +11,7 @@ const Nav = styled.div`
   height: 50px;
   display: flex;
   justify-content: flex-start;
-  position: fixed;
+  // position: fixed;
   top: 80px;
   z-index: 10;
   width: 100%;
