@@ -1,1 +1,2 @@
 Switch is changed to Routes 
+createStore() chnaged to configureStore()
