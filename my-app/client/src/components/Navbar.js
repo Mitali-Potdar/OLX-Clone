@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom';
 import Logo from "../images/logo.svg";
 import "../styles/navbar.css";
 import * as FaIcons from "react-icons/fa";
@@ -10,9 +11,9 @@ function Navbar() {
   return (
     <div className="top-header">
       <div className="logo-container">
-        <a href="/">
+        <Link to = "/">
           <img src={Logo} alt="logo" className="logo" />
-        </a>
+        </Link>
       </div>
       <div className="search">
         <input
@@ -47,9 +48,9 @@ function Navbar() {
           </div>
         </div>
         <div className="option" onClick={closeMobileMenu}>
-          <a href="/">
+          <Link to = "/login">
             <p className="login">LOGIN</p>
-          </a>
+          </Link>
         </div>
         <div className="option" onClick={closeMobileMenu}>
           <a href="/" className="sell-btn">

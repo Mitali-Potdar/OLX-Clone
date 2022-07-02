@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
+import Body from "./components/body/Body";
 import "./styles.css";
 import { BrowserRouter as Router} from 'react-router-dom';
 import Sidebar from "./components/Sidebar";
@@ -14,6 +15,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <Body />
       <Sidebar />
       <CarousalLanding />
       <CardList />
