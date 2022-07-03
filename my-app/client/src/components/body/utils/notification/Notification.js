@@ -8,3 +8,4 @@ export const showErrMsg = (msg) => {
 export const showSuccessMsg = (msg) => {
     return <div className="successMsg">{msg}</div>
 }
+

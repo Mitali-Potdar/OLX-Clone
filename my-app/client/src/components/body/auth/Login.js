@@ -106,9 +106,9 @@ function Login() {
                 callback={responseFacebook} 
                 />
 
-            </div>
+            </div> */}
 
-            <p>New Customer? <Link to="/register">Register</Link></p> */}
+            <p>New to our Site? <Link to="/register">Register</Link></p> 
         </div>
     )
 }
