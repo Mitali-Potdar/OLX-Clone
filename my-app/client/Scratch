@@ -1,2 +1,14 @@
-Switch is changed to Routes 
-createStore() chnaged to configureStore()
+// Switch is changed to Routes 
+// createStore() chnaged to configureStore()
+
+
+// Replace useHistory with useNavigate then
+
+// const navigate = useNavigate();
+// and then replace history.push('/path') with navigate('/path')
+
+// Change history.replace('/path') with navigate('/path', { replace: true })
+
+// Want to use state in push/navigate do navigate('/path', { state: { name:'Xyz' }})
+
+// https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom
