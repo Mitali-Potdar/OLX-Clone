@@ -3,8 +3,35 @@ import {Link} from 'react-router-dom';
 import Logo from "../images/logo.svg";
 import "../styles/navbar.css";
 import * as FaIcons from "react-icons/fa";
+import {useSelector} from 'react-redux'
+import axios from 'axios'
 
 function Navbar() {
+  const auth = useSelector(state => state.auth)
+
+  const {user, isLogged} = auth
+
+  const userLink = () => {
+    return <li >
+        <Link>
+        <img src={user.avatar} alt=""/> {user.name} 
+        </Link>
+    </li>
+}
+
+// const userLink = () => {
+//   return <li className="drop-nav">
+//       <Link to="#" className="avatar">
+//       <img src={user.avatar} alt=""/> {user.name} <i className="fas fa-angle-down"></i>
+//       </Link>
+//       <ul className="dropdown">
+//           <li><Link to="/profile">Profile</Link></li>
+//           <li><Link to="/" onClick={handleLogout}>Logout</Link></li>
+//       </ul>
+//   </li>
+// }
+        
+
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -40,18 +67,21 @@ function Navbar() {
               <p className="nav-name">DASHBOARD</p>
             </div>
             <div class="dash-dropdown-content">
-              <a href="/">Profile</a>
+              <Link to ="/">Profile</Link>
               <a href="/">Wishlist</a>
               <a href="/">My Listings</a>
-              <a href="/">Logout</a>
+        
             </div>
           </div>
         </div>
-        <div className="option" onClick={closeMobileMenu}>
-          <Link to = "/login">
-            <p className="login">LOGIN</p>
-          </Link>
-        </div>
+        {/* {
+                    isLogged
+                    ?<div className="option" onClick={closeMobileMenu}><Link to = "/login"><p className="login">LOG OUT</p></Link></div>
+                    : <div className="option" onClick={closeMobileMenu}><Link to = "/login"><p className="login">LOGIN</p></Link></div>
+                } */}
+
+                <div className="option" onClick={closeMobileMenu}><Link to = "/login"><p className="login">LOGIN</p></Link></div>
+       
         <div className="option" onClick={closeMobileMenu}>
           <a href="/" className="sell-btn">
             <p>SELL</p>
