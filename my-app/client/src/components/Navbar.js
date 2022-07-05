@@ -35,6 +35,11 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const transForm = {
+    transform: isLogged ? "translateY(-5px)" : 0
+}
+
   return (
     <div className="top-header">
       <div className="logo-container">
@@ -70,18 +75,19 @@ function Navbar() {
               <Link to ="/">Profile</Link>
               <a href="/">Wishlist</a>
               <a href="/">My Listings</a>
-        
+              <Link to ="/">Logout</Link>
             </div>
           </div>
         </div>
-        {/* {
+        <ul style={transForm}>    
+             {
                     isLogged
-                    ?<div className="option" onClick={closeMobileMenu}><Link to = "/login"><p className="login">LOG OUT</p></Link></div>
+                    ?<div className="option" onClick={closeMobileMenu}><Link to = "/login"><p className="login">LOGOUT</p></Link></div>
                     : <div className="option" onClick={closeMobileMenu}><Link to = "/login"><p className="login">LOGIN</p></Link></div>
-                } */}
+                } 
+                </ul>
 
-                <div className="option" onClick={closeMobileMenu}><Link to = "/login"><p className="login">LOGIN</p></Link></div>
-       
+                
         <div className="option" onClick={closeMobileMenu}>
           <a href="/" className="sell-btn">
             <p>SELL</p>
