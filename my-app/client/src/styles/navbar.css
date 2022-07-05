@@ -92,7 +92,9 @@ p {
 .login {
   padding-left: 10px;
   color: #fff;
+  text-align: center;
   transition: all 0.2s linear;
+  border-radius: 30px;
 }
 
 .nav-icon {

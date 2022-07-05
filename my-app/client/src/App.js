@@ -35,14 +35,13 @@ function App() {
       const getUser = () => {
         dispatch(dispatchLogin())
 
-        // return fetchUser(token).then(res => {
-        //   dispatch(dispatchGetUser(res))
-        // })
+        return fetchUser(token).then(res => {
+          dispatch(dispatchGetUser(res))
+        })
       }
       getUser()
     }
-  },[token])
-// },[token, dispatch])
+},[token, dispatch])
 
 
   return (

@@ -3,7 +3,7 @@ import ACTIONS from '../actions/'
 const initialState = {
     user: [],
     isLogged: false,
-    isAdmin: false
+    // isAdmin: false
 }
 
 const authReducer = (state = initialState, action) => {
@@ -13,12 +13,12 @@ const authReducer = (state = initialState, action) => {
                 ...state,
                 isLogged: true
             }
-    //     case ACTIONS.GET_USER:
-    //         return {
-    //             ...state,
-    //             user: action.payload.user,
-    //             isAdmin: action.payload.isAdmin
-    //         }
+        case ACTIONS.GET_USER:
+            return {
+                ...state,
+                user: action.payload.user
+                // isAdmin: action.payload.isAdmin
+            }
         default:
             return state
     }
