@@ -5,7 +5,6 @@ import {showErrMsg, showSuccessMsg} from '../../utils/notification/Notification'
 import {dispatchLogin} from '../../../redux/actions/authAction'
 import {useDispatch} from 'react-redux'
 // import { GoogleLogin } from 'react-google-login';
-// import FacebookLogin from 'react-facebook-login';
 
 import './auth.css';
 
