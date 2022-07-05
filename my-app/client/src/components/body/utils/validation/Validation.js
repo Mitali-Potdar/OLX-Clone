@@ -10,7 +10,7 @@ export const isEmail = email => {
 }
 
 export const isLength = password => {
-    if(password.length < 6) return true
+    if(password.length < 8) return true
     return false
 }
 

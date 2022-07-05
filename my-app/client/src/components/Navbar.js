@@ -11,34 +11,19 @@ function Navbar() {
 
   const {user, isLogged} = auth
 
-  const userLink = () => {
-    return <li >
-        <Link>
-        <img src={user.avatar} alt=""/> {user.name} 
-        </Link>
-    </li>
+  const handleLogout = async () => {
+    try {
+        await axios.get('/user/logout')
+        localStorage.removeItem('firstLogin')
+        window.location.href = "/";
+    } catch (err) {
+        window.location.href = "/";
+    }
 }
-
-// const userLink = () => {
-//   return <li className="drop-nav">
-//       <Link to="#" className="avatar">
-//       <img src={user.avatar} alt=""/> {user.name} <i className="fas fa-angle-down"></i>
-//       </Link>
-//       <ul className="dropdown">
-//           <li><Link to="/profile">Profile</Link></li>
-//           <li><Link to="/" onClick={handleLogout}>Logout</Link></li>
-//       </ul>
-//   </li>
-// }
-        
 
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
-  const transForm = {
-    transform: isLogged ? "translateY(-5px)" : 0
-}
 
   return (
     <div className="top-header">
@@ -72,22 +57,20 @@ function Navbar() {
               <p className="nav-name">DASHBOARD</p>
             </div>
             <div class="dash-dropdown-content">
-              <Link to ="/">Profile</Link>
+              <Link to ="/profile">Profile</Link>
               <a href="/">Wishlist</a>
               <a href="/">My Listings</a>
-              <Link to ="/">Logout</Link>
+              <Link to="/" onClick={handleLogout}>Logout</Link>
             </div>
           </div>
         </div>
-        <ul style={transForm}>    
-             {
-                    isLogged
-                    ?<div className="option" onClick={closeMobileMenu}><Link to = "/login"><p className="login">LOGOUT</p></Link></div>
-                    : <div className="option" onClick={closeMobileMenu}><Link to = "/login"><p className="login">LOGIN</p></Link></div>
-                } 
-                </ul>
-
-                
+        <div className="option" onClick={closeMobileMenu}>
+          {
+            isLogged
+            ?<Link to="/" onClick={handleLogout}><p className="login">LOGOUT</p></Link>
+            :<Link to = "/login"><p className="login">LOGIN</p></Link>
+          } 
+        </div>              
         <div className="option" onClick={closeMobileMenu}>
           <a href="/" className="sell-btn">
             <p>SELL</p>

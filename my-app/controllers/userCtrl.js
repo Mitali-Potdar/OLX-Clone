@@ -19,8 +19,8 @@ const userCtrl = {
             const user = await Users.findOne({email})
             if(user) return res.status(400).json({msg: "This email already exists."})
 
-            if(password.length < 6)
-                return res.status(400).json({msg: "Password must be at least 6 characters."})
+            if(password.length < 8)
+                return res.status(400).json({msg: "Password must be at least 8 characters."})
 
             const passwordHash = await bcrypt.hash(password, 12)
 
@@ -55,7 +55,7 @@ const userCtrl = {
 
             await newUser.save()
 
-            res.json({msg: "Account has been activated!"})
+            res.json({msg: "Account has been activated! Please Login."})
 
         } catch (err) {
             return res.status(500).json({msg: err.message})
@@ -136,7 +136,6 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
-    //Not sure of the need
     // getUsersAllInfor: async (req, res) => {
     //     try {
     //         const users = await Users.find().select('-password')

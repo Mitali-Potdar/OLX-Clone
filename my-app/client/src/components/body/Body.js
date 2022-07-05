@@ -3,7 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import Login from './auth/Login'
 import Register from './auth/Register'
 import ActivationEmail from './auth/ActivationEmail'
-// import NotFound from '../utils/NotFound/NotFound'
+import NotFound from './utils/NotFound/NotFound'
 
 // import ForgotPass from '../body/auth/ForgotPassword'
 // import ResetPass from '../body/auth/ResetPassword'
@@ -13,19 +13,19 @@ import ActivationEmail from './auth/ActivationEmail'
 
 // import Home from '../body/home/Home'
 
-// import {useSelector} from 'react-redux'
+import {useSelector} from 'react-redux'
 
 function Body() {
-    // const auth = useSelector(state => state.auth)
-    // const {isLogged} = auth
+    const auth = useSelector(state => state.auth)
+    const {isLogged} = auth
     return (
         
             <Routes>
                 {/* <Route path="/" component={Home} exact /> */}
-                <Route path="/login" element={<Login/>} exact/>
+                <Route path="/login" element={isLogged ? <NotFound/> : <Login/>} exact/>
                 {/* <Route path="/login" component={isLogged ? NotFound : Login} exact /> */}
-                <Route path="/register" element={<Register/>} exact/>
-                  {/* <Route path="/register" component={isLogged ? NotFound : Register} exact /> */}
+                <Route path="/register" element={isLogged ? <NotFound/> : <Register/>} exact/>
+                {/* <Route path="/register" component={isLogged ? NotFound : Register} exact /> */}
 
                 {/* <Route path="/forgot_password" component={isLogged ? NotFound : ForgotPass} exact />
                 <Route path="/user/reset/:token" component={isLogged ? NotFound : ResetPass} exact /> */}

@@ -4,7 +4,7 @@ import axios from 'axios'
 import {showErrMsg, showSuccessMsg} from '../utils/notification/Notification'
 import {isEmpty, isEmail, isLength, isMatch} from '../utils/validation/Validation'
 
-
+import './auth.css';
 const initialState = {
     name: '',
     email: '',
@@ -34,7 +34,7 @@ function Register() {
             return setUser({...user, err: "Invalid emails.", success: ''})
 
         if(isLength(password))
-            return setUser({...user, err: "Password must be at least 6 characters.", success: ''})
+            return setUser({...user, err: "Password must be at least 8 characters.", success: ''})
         
         if(!isMatch(password, cf_password))
             return setUser({...user, err: "Password did not match.", success: ''})
