@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import {showErrMsg, showSuccessMsg} from '../utils/notification/Notification'
-import {isEmpty, isEmail, isLength, isMatch} from '../utils/validation/Validation'
+import {showErrMsg, showSuccessMsg} from '../../utils/notification/Notification'
+import {isEmpty, isEmail, isLength, isMatch} from '../../utils/validation/Validation'
 
 import './auth.css';
 const initialState = {
