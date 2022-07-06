@@ -1,6 +1,6 @@
 import Card from "./card";
 import content from "./contentList";
-import '../styles/cardList.css'
+import '../../../styles/cardList.css'
 
 
 function createCard(props) {

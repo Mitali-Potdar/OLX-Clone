@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers, faComments, faHeartCirclePlus } from '@fortawesome/free-solid-svg-icons';
 // import { fa} from '@fortawesome/free-brands-svg-icons'
-import '../styles/Filler.css';
+import '../../../styles/Filler.css';
 
 
 

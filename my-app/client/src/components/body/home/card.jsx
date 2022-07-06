@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import '../styles/card.css'
+import '../../../styles/card.css'
 
 function Card(props) {
     return (

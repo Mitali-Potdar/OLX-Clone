@@ -1,5 +1,5 @@
-import Image1 from "../images/img1.jpg"
-import '../styles/LandingCarousel.css'
+import Image1 from "../../../images/img1.jpg"
+import '../../../styles/LandingCarousel.css'
 
 function CarousalLanding() {
     return (

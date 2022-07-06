@@ -1,15 +1,10 @@
 import React, {useEffect} from "react";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ScrollButton from "./components/ScrollButton";
 import Body from "./components/body/Body";
 import "./styles.css";
 import { BrowserRouter as Router} from 'react-router-dom';
-import Sidebar from "./components/Sidebar";
-import CardList from "./components/cardList"
-import CarousalLanding from "./components/Carousal";
-import Filler from "./components/Filler";
-import CarouselFiller from "./components/carouselFiller";
-import Footer from "./components/Footer";
-import ScrollButton from "./components/ScrollButton";
 import {useDispatch, useSelector} from 'react-redux';
 import axios from 'axios';
 import {dispatchLogin, fetchUser, dispatchGetUser} from './redux/actions/authAction';
@@ -48,13 +43,8 @@ function App() {
     <Router>
       <Navbar />
       <Body />
-      {/* <Sidebar />
-      <CarousalLanding />
-      <CardList />
-      <CarouselFiller />
-      <Filler />
+      <ScrollButton/>
       <Footer />
-      <ScrollButton />  */}
     </Router>
   );
 }
