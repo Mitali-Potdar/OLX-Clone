@@ -16,13 +16,11 @@ router.post('/reset', auth, userCtrl.resetPassword)
 
 router.get('/infor', auth, userCtrl.getUserInfor)
 
-// router.get('/all_infor', auth, userCtrl.getUsersAllInfor)
-
 router.get('/logout', userCtrl.logout)
 
 router.patch('/update', auth, userCtrl.updateUser)
 
-router.delete('/delete/:id', auth, userCtrl.deleteUser)
+// router.delete('/delete/:id', auth, userCtrl.deleteUser)
 
 // // Social Login
 // router.post('/google_login', userCtrl.googleLogin)

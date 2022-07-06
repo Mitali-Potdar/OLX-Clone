@@ -9,7 +9,6 @@ import ForgotPass from '../body/auth/ForgotPassword'
 import ResetPass from '../body/auth/ResetPassword'
 
 import Profile from '../body/profile/Profile'
-// import EditUser from '../body/profile/EditUser'
 
 import Home from '../body/home/Home'
 
@@ -31,8 +30,6 @@ function Body() {
                 <Route path="/user/activate/:activation_token" element={<ActivationEmail/>} exact/>
 
                 <Route path="/profile"  element={isLogged ? <Profile/> : <NotFound msg="Please Login to your account."/>} exact />
-
-                {/* <Route path="/edit_user/:id"  element={isAdmin ? <EditUser/> : <NotFound/>} exact />  */}
 
             </Routes>
         

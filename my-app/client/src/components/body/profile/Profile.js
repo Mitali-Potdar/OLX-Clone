@@ -100,24 +100,6 @@ function Profile() {
         if(password) updatePassword()
     }
 
-    const handleDelete = async (id) => {
-        try {
-            if(user._id !== id){
-                if(window.confirm("Are you sure you want to delete this account?")){
-                    setLoading(true)
-                    await axios.delete(`/user/delete/${id}`, {
-                        headers: {Authorization: token}
-                    })
-                    setLoading(false)
-                    setCallback(!callback)
-                }
-            }
-            
-        } catch (err) {
-            setData({...data, err: err.response.data.msg , success: ''})
-        }
-    }
-
     return (
         <div>
             <div>
@@ -182,9 +164,7 @@ function Profile() {
                         <h2>Wishlist</h2>
                     </div>
                 </div>
-                    {/* <div title="Remove" onClick={() => handleDelete(user._id)}> 
-                        <FaIcons.FaTrashAlt /><p> Delete Account</p>
-                    </div> */}
+                    
                 
             </div>
         </div>

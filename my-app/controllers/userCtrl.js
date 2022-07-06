@@ -14,7 +14,7 @@ const userCtrl = {
                 return res.status(400).json({msg: "Please fill in all fields."})
 
             if(!validateEmail(email))
-                return res.status(400).json({msg: "Invalid emails."})
+                return res.status(400).json({msg: "Invalid email."})
 
             const user = await Users.findOne({email})
             if(user) return res.status(400).json({msg: "This email already exists."})
@@ -34,7 +34,7 @@ const userCtrl = {
             sendMail(email, url, "Verify your email address")
 
 
-            res.json({msg: "Register Success! Please activate your email to start."})
+            res.json({msg: "Registered Successfully! Please activate your account to start."})
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }
@@ -77,7 +77,7 @@ const userCtrl = {
                 maxAge: 7*24*60*60*1000 // 7 days
             })
 
-            res.json({msg: "Login success!"})
+            res.json({msg: "Logged in Succesfully!"})
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }
@@ -106,7 +106,7 @@ const userCtrl = {
             const access_token = createAccessToken({id: user._id})
             const url = `${CLIENT_URL}/user/reset/${access_token}`
 
-            sendMail(email, url, "Reset your password")
+            sendMail(email, url, "Reset your password.")
             res.json({msg: "Please check your email to reset the password."})
         } catch (err) {
             return res.status(500).json({msg: err.message})
@@ -160,20 +160,20 @@ const userCtrl = {
                 name, avatar
             })
 
-            res.json({msg: "Update Success!"})
+            res.json({msg: "User information Updated!"})
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }
     },
-    deleteUser: async (req, res) => {
-        try {
-            await Users.findByIdAndDelete(req.params.id)
+    // deleteUser: async (req, res) => {
+    //     try {
+    //         await Users.findByIdAndDelete(req.user.id)
 
-            res.json({msg: "Deleted Success!"})
-        } catch (err) {
-            return res.status(500).json({msg: err.message})
-        }
-    },
+    //         res.json({msg: "User Deleted Successfully!"})
+    //     } catch (err) {
+    //         return res.status(500).json({msg: err.message})
+    //     }
+    // },
 }
 
 function validateEmail(email) {
