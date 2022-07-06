@@ -8,7 +8,7 @@ import NotFound from '../utils/NotFound/NotFound'
 import ForgotPass from '../body/auth/ForgotPassword'
 import ResetPass from '../body/auth/ResetPassword'
 
-// import Profile from '../body/profile/Profile'
+import Profile from '../body/profile/Profile'
 // import EditUser from '../body/profile/EditUser'
 
 // import Home from '../body/home/Home'
@@ -22,17 +22,17 @@ function Body() {
         
             <Routes>
                 {/* <Route path="/"  element={<Home/>} exact /> */}
-                <Route path="/login" element={isLogged ? <NotFound/> : <Login/>} exact/>
-                <Route path="/register" element={isLogged ? <NotFound/> : <Register/>} exact/>
+                <Route path="/login" element={isLogged ? <NotFound msg="You are already logged in!"/> : <Login/>} exact/>
+                <Route path="/register" element={isLogged ? <NotFound msg="You are already logged in!"/> : <Register/>} exact/>
 
-                <Route path="/forgot_password"  element={isLogged ?<NotFound/> : <ForgotPass/>} exact />
-                <Route path="/user/reset/:token"  element={isLogged ? <NotFound/> : <ResetPass/>} exact />
+                <Route path="/forgot_password"  element={isLogged ?<NotFound msg="You are already logged in!"/> : <ForgotPass/>} exact />
+                <Route path="/user/reset/:token"  element={isLogged ? <NotFound msg="You are already logged in!"/> : <ResetPass/>} exact />
 
                 <Route path="/user/activate/:activation_token" element={<ActivationEmail/>} exact/>
-                {/* <Route path="/user/activate/:activation_token"  element={<ActivationEmail/>} exact />
 
-                <Route path="/profile"  element={isLogged ? <Profile/> : <NotFound/>} exact />
-                <Route path="/edit_user/:id"  element={isAdmin ? <EditUser/> : <NotFound/>} exact />  */}
+                <Route path="/profile"  element={isLogged ? <Profile/> : <NotFound msg="Please Login to your account."/>} exact />
+
+                {/* <Route path="/edit_user/:id"  element={isAdmin ? <EditUser/> : <NotFound/>} exact />  */}
 
             </Routes>
         
