@@ -81,12 +81,13 @@ function Login() {
                     <input type="password" placeholder="Enter password" id="password"
                     value={password} name="password" onChange={handleChangeInput}/>
                 </div>
-
-                <div className="row">
-                    <button type="submit">Login</button>
-                    <Link to="/forgot_password">Forgot your password?</Link>
-                </div>
+            
+                <button type="submit">Login</button>
+                <Link to="/forgot_password" className="fp">Forgot your password?</Link>
             </form>
+
+            
+                
 
             {/* <div className="hr">Or Login With</div>
 

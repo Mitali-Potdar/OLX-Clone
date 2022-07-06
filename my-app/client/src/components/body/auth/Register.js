@@ -83,9 +83,9 @@ function Register() {
                     value={cf_password} name="cf_password" onChange={handleChangeInput} />
                 </div>
 
-                <div className="row">
-                    <button type="submit">Register</button>
-                </div>
+                
+                <button type="submit" >Register</button>
+                
             </form>
 
             <p>Already have an account? <Link to="/login">Login</Link></p>

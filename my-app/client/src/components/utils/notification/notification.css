@@ -1,5 +1,7 @@
 .errMsg{
     background: rgb(214, 10, 10);
+    width:560px;
+    margin-bottom: 10px;
     color: #fff9;
     text-align: center;
     padding: 10px 0;
@@ -9,8 +11,26 @@
 .successMsg{
     background: rgb(9, 158, 54);
     color: #fff9;
+    width:560px;
     text-align: center;
     padding: 10px 0;
     letter-spacing: 1.3px;
 }
 
+@media (max-width: 500px){
+    .errMsgt {
+        width: 300px;
+    }
+    .successMsg{
+        width: 300px;
+    }
+}
+
+@media (max-width: 750px){
+    .errMsg {
+        width: 510px;
+    }
+    .successMsg{
+        width: 510px;
+    }
+}

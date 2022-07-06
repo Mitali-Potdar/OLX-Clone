@@ -1,11 +1,15 @@
 .profile_page{
     padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 .profile_page .info{
-    
+    padding-left: 30px;
+    padding-right: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-right: 2px solid rgb(255, 255, 255);
 }
 
 .profile_page .info .avatar{
@@ -66,7 +70,7 @@
     color:rgb(241, 241, 241);
 }
 .profile_page .info input{
-    width: 600px;
+    width: 500px;
     height: 40px;
     margin: 8px 0;
     border: none;
@@ -89,6 +93,9 @@
 
 .profile_page .info button:hover{
     transform: scale(1.15);
+}
+.profile_page .info em{
+    color: crimson;
 }
 
 @media (max-width: 500px){

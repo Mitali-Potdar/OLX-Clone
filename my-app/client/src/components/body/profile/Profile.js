@@ -20,7 +20,7 @@ function Profile() {
 
     const users = useSelector(state => state.users)
 
-    const {user, isAdmin} = auth
+    const {user} = auth
     const [data, setData] = useState(initialState)
     const {name, password, cf_password, err, success} = data
 
@@ -44,7 +44,7 @@ function Profile() {
                 return setData({...data, err: "Size is too large." , success: ''})
 
             if(file.type !== 'image/jpeg' && file.type !== 'image/png')
-                return setData({...data, err: "File format is incorrect." , success: ''})
+                return setData({...data, err: "Upload jpeg or png file." , success: ''})
 
             let formData =  new FormData()
             formData.append('file', file)
@@ -127,7 +127,7 @@ function Profile() {
             </div>
             <div className="profile_page">
                 <div className = "info">
-                    <h2>User Profile</h2>
+                    <h2>My Profile</h2>
 
                     <div className="avatar">
                         <img src={avatar ? avatar : user.avatar} alt=""/>
@@ -163,9 +163,9 @@ function Profile() {
                     </div>
 
                     <div>
-                        <em style={{color: "crimson"}}> 
-                        * If you update your password here, you will not be able 
-                            to login quickly using google.
+                        <em className="em-msg"> 
+                        *If you update your password here, <br/>you will not be able 
+                        to login quickly using google.
                         </em>
                     </div>
 
@@ -174,9 +174,16 @@ function Profile() {
                     </div>
                 </div>
 
-                
+                <div className="wish_ad">
+                    <div className="wishlist">
+                        <h2>My Listings</h2>
+                    </div>
+                    <div className="listings">
+                        <h2>Wishlist</h2>
+                    </div>
+                </div>
                     {/* <div title="Remove" onClick={() => handleDelete(user._id)}> 
-                        <FaIcons.FaTrashAlt className="nav-icon"/><p> Delete Account</p>
+                        <FaIcons.FaTrashAlt /><p> Delete Account</p>
                     </div> */}
                 
             </div>

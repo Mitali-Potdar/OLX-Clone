@@ -11,7 +11,7 @@ import ResetPass from '../body/auth/ResetPassword'
 import Profile from '../body/profile/Profile'
 // import EditUser from '../body/profile/EditUser'
 
-// import Home from '../body/home/Home'
+import Home from '../body/home/Home'
 
 import {useSelector} from 'react-redux'
 
@@ -21,7 +21,7 @@ function Body() {
     return (
         
             <Routes>
-                {/* <Route path="/"  element={<Home/>} exact /> */}
+                <Route path="/"  element={<Home/>} exact />
                 <Route path="/login" element={isLogged ? <NotFound msg="You are already logged in!"/> : <Login/>} exact/>
                 <Route path="/register" element={isLogged ? <NotFound msg="You are already logged in!"/> : <Register/>} exact/>
 
