@@ -81,14 +81,15 @@ footer * {
   background-color: #4d23af;
   color: #ffffff;
 }
-div.social {
+div.socials {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   font-size: 2.4em;
   flex-direction: row;
   margin-top: 0.5em;
+  grid-gap: 5px;
 }
-.social i {
+.socials{
   color: #bac6d9;
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Footer.css";
 import Logo from "../images/logo.svg";
+import * as FaIcons from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -17,16 +18,15 @@ const Footer = () => {
             voluptatem corporis error non,
           </p>
 
-          <div className="social">
-            <i class="fa-brands fa-facebook-square"></i>
-            <i class="fa-brands fa-instagram-square"></i>
-            <i class="fa-brands fa-twitter-square"></i>
-            <i class="fa-brands fa-youtube-square"></i>
-            <i class="fa-brands fa-whatsapp-square"></i>
+          <div className="socials">
+          <FaIcons.FaInstagram />
+          <FaIcons.FaWhatsapp />
+          <FaIcons.FaFacebook />
+          <FaIcons.FaTwitter />
           </div>
         </div>
 
-        <div class="column-links">
+        <div className="column-links">
           <h3 className="h3-footer">Some Links</h3>
 
           <ul className="ul-footer">
@@ -45,7 +45,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div class="column-links">
+        <div className="column-links">
           <h3 className="h3-footer">Some Links</h3>
           <ul className="ul-footer">
             <li>
@@ -63,7 +63,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div class="column-subscribe">
+        <div className="column-subscribe">
           <h3 className="h3-footer">Newsletter</h3>
           <div>
             <input 
@@ -76,8 +76,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div class="row-copyright">
-        <div class="footer-menu">
+      <div className="row-copyright">
+        <div className="footer-menu">
           <a href="/">Home</a>
           <a href="/">About</a>
           <a href="/">Contact</a>

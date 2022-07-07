@@ -2,16 +2,6 @@ import React, {useState} from 'react';
 import {FaArrowCircleUp} from 'react-icons/fa';
 import styled from 'styled-components';
 
-const Heading = styled.h1`
-text-align: center;
-color: green;
-`;
-
-const Content = styled.div`
-overflowY: scroll;
-height: 2500px;
-`;
-
 const Button = styled.div`
 position: fixed;
 width: 100%;

@@ -9,7 +9,7 @@ import axios from 'axios'
 function Navbar() {
   const auth = useSelector(state => state.auth)
 
-  const {user, isLogged} = auth
+  const {isLogged} = auth
 
   const handleLogout = async () => {
     try {
@@ -51,12 +51,12 @@ function Navbar() {
           </a>
         </div>
         <div className="option" onClick={closeMobileMenu}>
-          <div class="dash-dropdown">
-            <div class="dashbtn">
+          <div className="dash-dropdown">
+            <div className="dashbtn">
               <FaIcons.FaUserCircle className="nav-icon" />
               <p className="nav-name">DASHBOARD</p>
             </div>
-            <div class="dash-dropdown-content">
+            <div className="dash-dropdown-content">
               <Link to ="/profile">Profile</Link>
               <a href="/">Wishlist</a>
               <a href="/">My Listings</a>

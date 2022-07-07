@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import { Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import {isLength, isMatch} from '../../utils/validation/Validation'
 import {showSuccessMsg, showErrMsg} from '../../utils/notification/Notification'
@@ -18,15 +19,12 @@ function Profile() {
     const auth = useSelector(state => state.auth)
     const token = useSelector(state => state.token)
 
-    const users = useSelector(state => state.users)
-
     const {user} = auth
     const [data, setData] = useState(initialState)
     const {name, password, cf_password, err, success} = data
 
     const [avatar, setAvatar] = useState(false)
     const [loading, setLoading] = useState(false)
-    const [callback, setCallback] = useState(false)
 
     const handleChange = e => {
         const {name, value} = e.target
@@ -154,18 +152,12 @@ function Profile() {
                     <div>
                         <button disabled={loading} onClick={handleUpdate}>Update</button>
                     </div>
-                </div>
 
-                <div className="wish_ad">
-                    <div className="wishlist">
-                        <h2>My Listings</h2>
+                    <div className="wish_ad">
+                        <Link to="/" className="linkbtn">My Listings</Link>
+                        <Link to="/" className="linkbtn">My Wishlist</Link>
                     </div>
-                    <div className="listings">
-                        <h2>Wishlist</h2>
-                    </div>
-                </div>
-                    
-                
+                </div> 
             </div>
         </div>
     )

@@ -1,15 +1,12 @@
 .profile_page{
     padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
 }
 .profile_page .info{
-    padding-left: 30px;
-    padding-right: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 2px solid rgb(255, 255, 255);
+    padding-bottom: 20px;
+    /* border-bottom: 1px solid #ddd; */
 }
 
 .profile_page .info .avatar{
@@ -89,6 +86,7 @@
     letter-spacing: 1.4px;
     margin: 10px 0;
     transition: all 0.2s linear;
+    margin-bottom: 40px;
 }
 
 .profile_page .info button:hover{
@@ -96,6 +94,27 @@
 }
 .profile_page .info em{
     color: crimson;
+}
+
+.wish_ad{
+    border-top:1px solid #ddd;
+    padding-top:50px;
+}
+
+.linkbtn{
+    color:rgb(241, 241, 241);
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-size: large;
+    transition: all 0.2s linear;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.linkbtn:hover{
+    color:#4d23af;
 }
 
 @media (max-width: 500px){

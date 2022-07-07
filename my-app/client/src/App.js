@@ -43,8 +43,8 @@ function App() {
     <Router>
       <Navbar />
       <Body />
-      {/* <ScrollButton/>
-      <Footer /> */}
+      <ScrollButton/>
+      <Footer />
     </Router>
   );
 }

@@ -1,10 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import {showErrMsg, showSuccessMsg} from '../../utils/notification/Notification'
 import {dispatchLogin} from '../../../redux/actions/authAction'
 import {useDispatch} from 'react-redux'
 import { GoogleLogin } from 'react-google-login';
+import { gapi } from 'gapi-script';
 
 import './auth.css';
 
@@ -17,6 +18,17 @@ const initialState = {
 
 
 function Login() {
+
+    useEffect(() => {
+        function start() {
+        gapi.client.init({
+        clientId:"681065330696-lcbrpd6survo7em2v2d6n3t5teljceev.apps.googleusercontent.com",
+        scope: 'email',
+          });
+           }
+          gapi.load('client:auth2', start);
+        }, 
+    [])
     
     const [user, setUser] = useState(initialState)
     const dispatch = useDispatch()
@@ -40,8 +52,7 @@ function Login() {
             localStorage.setItem('firstLogin', true)
 
             dispatch(dispatchLogin())
-            navigate.push("/")
-
+            navigate("/")
         } catch (err) {
             err.response.data.msg && 
             setUser({...user, err: err.response.data.msg, success: ''})
@@ -56,17 +67,19 @@ function Login() {
             localStorage.setItem('firstLogin', true)
 
             dispatch(dispatchLogin())
-            navigate.push("/")
+            navigate("/")
         } catch (err) {
             err.response.data.msg && 
             setUser({...user, err: err.response.data.msg, success: ''})
         }
     }
+
     return (
-        <div className="login_page">
-            <h2>Login</h2>
+        <div >
             {err && showErrMsg(err)}
             {success && showSuccessMsg(success)}
+            <div className="login_page">
+            <h2>Login</h2>
 
             <form onSubmit={handleSubmit}>
                 <div>
@@ -85,31 +98,21 @@ function Login() {
                 <Link to="/forgot_password" className="fp">Forgot your password?</Link>
             </form>
 
-            
-                
+            <div style={{color: "rgb(242, 242, 242)"}}>OR</div>
 
-            <div className="hr">Or Login With Google</div>
-
-            <div className="social">
+            <div className="google_login">
            
-            <GoogleLogin
-              clientId="681065330696-lcbrpd6survo7em2v2d6n3t5teljceev.apps.googleusercontent.com"
-              buttonText="Login"
-              onSuccess={responseGoogle}
-              cookiePolicy={'single_host_origin'}
-            />,
-
-                
-                {/* <FacebookLogin
-                appId="Your facebook app id"
-                autoLoad={false}
-                fields="name,email,picture"
-                callback={responseFacebook} 
-                /> */}
-
+                <GoogleLogin
+                clientId="681065330696-lcbrpd6survo7em2v2d6n3t5teljceev.apps.googleusercontent.com"
+                buttonText="Login with Google"
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}
+                cookiePolicy={'single_host_origin'}
+                />
             </div> 
 
             <p>New to our Site? <Link to="/register">Register</Link></p> 
+            </div>
         </div>
     )
 }
