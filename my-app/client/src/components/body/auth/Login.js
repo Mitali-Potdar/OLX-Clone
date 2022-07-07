@@ -4,7 +4,7 @@ import axios from 'axios'
 import {showErrMsg, showSuccessMsg} from '../../utils/notification/Notification'
 import {dispatchLogin} from '../../../redux/actions/authAction'
 import {useDispatch} from 'react-redux'
-// import { GoogleLogin } from 'react-google-login';
+import { GoogleLogin } from 'react-google-login';
 
 import './auth.css';
 
@@ -21,6 +21,7 @@ function Login() {
     const [user, setUser] = useState(initialState)
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    
 
     const {email, password, err, success} = user
 
@@ -34,13 +35,12 @@ function Login() {
         e.preventDefault()
         try {
             const res = await axios.post('/user/login', {email, password})
-            
             setUser({...user, err: '', success: res.data.msg})
 
             localStorage.setItem('firstLogin', true)
 
             dispatch(dispatchLogin())
-            navigate("/")
+            navigate.push("/")
 
         } catch (err) {
             err.response.data.msg && 
@@ -48,21 +48,20 @@ function Login() {
         }
     }
 
-    // const responseGoogle = async (response) => {
-    //     try {
-    //         const res = await axios.post('/user/google_login', {tokenId: response.tokenId})
+    const responseGoogle = async (response) => {
+        try {
+            const res = await axios.post('/user/google_login', {tokenId: response.tokenId})
 
-    //         setUser({...user, error:'', success: res.data.msg})
-    //         localStorage.setItem('firstLogin', true)
+            setUser({...user, error:'', success: res.data.msg})
+            localStorage.setItem('firstLogin', true)
 
-    //         dispatch(dispatchLogin())
-    //         history.push('/')
-    //     } catch (err) {
-    //         err.response.data.msg && 
-    //         setUser({...user, err: err.response.data.msg, success: ''})
-    //     }
-    // }
-
+            dispatch(dispatchLogin())
+            navigate.push("/")
+        } catch (err) {
+            err.response.data.msg && 
+            setUser({...user, err: err.response.data.msg, success: ''})
+        }
+    }
     return (
         <div className="login_page">
             <h2>Login</h2>
@@ -89,24 +88,26 @@ function Login() {
             
                 
 
-            {/* <div className="hr">Or Login With</div>
+            <div className="hr">Or Login With Google</div>
 
             <div className="social">
-                <GoogleLogin
-                    clientId="Your google client id"
-                    buttonText="Login with google"
-                    onSuccess={responseGoogle}
-                    cookiePolicy={'single_host_origin'}
-                />
+           
+            <GoogleLogin
+              clientId="681065330696-lcbrpd6survo7em2v2d6n3t5teljceev.apps.googleusercontent.com"
+              buttonText="Login"
+              onSuccess={responseGoogle}
+              cookiePolicy={'single_host_origin'}
+            />,
+
                 
-                <FacebookLogin
+                {/* <FacebookLogin
                 appId="Your facebook app id"
                 autoLoad={false}
                 fields="name,email,picture"
                 callback={responseFacebook} 
-                />
+                /> */}
 
-            </div> */}
+            </div> 
 
             <p>New to our Site? <Link to="/register">Register</Link></p> 
         </div>

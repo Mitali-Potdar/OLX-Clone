@@ -22,7 +22,7 @@ router.patch('/update', auth, userCtrl.updateUser)
 
 // router.delete('/delete/:id', auth, userCtrl.deleteUser)
 
-// // Social Login
-// router.post('/google_login', userCtrl.googleLogin)
+ // Social Login
+ router.post('/google_login', userCtrl.googleLogin)
 
 module.exports = router;
