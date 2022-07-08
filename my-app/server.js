@@ -18,6 +18,7 @@ app.use(
 //Routes
 app.use("/user", require("./routes/userRouter"));
 app.use("/api", require("./routes/upload"));
+app.use("/api/products", require("./routes/productRoute"));
 
 // Connect to mongodb
 const URI = process.env.MONGODB_URL;
@@ -33,7 +34,7 @@ mongoose.connect(
   }
 );
 
-const PORT = process.env.PORT || 2000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log("Server is running on port", PORT);
 });
