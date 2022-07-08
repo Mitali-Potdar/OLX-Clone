@@ -1,13 +1,7 @@
 /* list intro  */
 
 .album {
-    padding: 11rem 6rem 11rem !important;
-}
-
-.featured-heading {
-    position: relative;
-    left: 10px;
-    color:white;
+    padding: 2rem 6rem 11rem !important;
 }
 
 .list-intro p,
@@ -22,6 +16,7 @@
     top: -33px;
     color: white;
 }
+
 
 .view-all:hover {
     color: white;

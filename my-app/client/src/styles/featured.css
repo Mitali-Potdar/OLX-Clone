@@ -1,0 +1,20 @@
+.custom-badge{
+    position: relative;
+  color: #fff;
+  font-size: 16px;
+  padding: 5px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 7px;
+  text-decoration: underline;
+  top: 2px;
+}
+
+.featured-cont{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    font-size: 2rem;
+    color: white;
+}
