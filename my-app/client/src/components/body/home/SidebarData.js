@@ -13,33 +13,33 @@ export const SidebarData = [
     subNav: [
       {
         title: "Bedding",
-        path: "/householditems/bedding"
+        path: "/householditems/bedding",
       },
       {
         title: "Curtains",
-        path: "/householditems/curtains"
+        path: "/householditems/curtains",
       },
       {
         title: "Chair",
-        path: "/householditems/chair"
+        path: "/householditems/chair",
       },
       {
         title: "Bed Table",
-        path: "/householditems/bedtable"
+        path: "/householditems/bedtable",
       },
       {
         title: "Cleaning Equipments",
-        path: "/householditems/cleaningequipments"
+        path: "/householditems/cleaningequipments",
       },
       {
         title: "Bucket",
-        path: "/householditems/bucket"
+        path: "/householditems/bucket",
       },
       {
         title: "Others",
-        path: "/householditems/others"
-      }
-    ]
+        path: "/householditems/others",
+      },
+    ],
   },
 
   {
@@ -52,41 +52,41 @@ export const SidebarData = [
     subNav: [
       {
         title: "Gadgets",
-        path: "/electronicsandappliances/gadgets"
+        path: "/electronicsandappliances/gadgets",
       },
       {
         title: "Lamps",
-        path: "/electronicsandappliances/ lamps"
+        path: "/electronicsandappliances/ lamps",
       },
       {
         title: "Kettles",
-        path: "/electronicsandappliances/kettles"
+        path: "/electronicsandappliances/kettles",
       },
       {
         title: "Hair Equipments",
-        path: "/electronicsandappliances/hairequipments"
+        path: "/electronicsandappliances/hairequipments",
       },
       {
         title: "Camera",
-        path: "/electronicsandappliances/ camera"
+        path: "/electronicsandappliances/ camera",
       },
       {
         title: "Small Fridge",
-        path: "/electronicsandappliances/smallfridge"
+        path: "/electronicsandappliances/smallfridge",
       },
       {
         title: "Computer Hardware",
-        path: "/electronicsandappliances/computerhardware"
+        path: "/electronicsandappliances/computerhardware",
       },
       {
         title: "Sound Devices",
-        path: "/electronicsandappliances/sound"
+        path: "/electronicsandappliances/sound",
       },
       {
         title: "Others",
-        path: "/householditems/others"
-      }
-    ]
+        path: "/householditems/others",
+      },
+    ],
   },
 
   {
@@ -99,21 +99,21 @@ export const SidebarData = [
     subNav: [
       {
         title: "Cycles",
-        path: "/sportsandoutdoor/cycles"
+        path: "/sportsandoutdoor/cycles",
       },
       {
         title: "Skateboard",
-        path: "/sportsandoutdoor/skateboard"
+        path: "/sportsandoutdoor/skateboard",
       },
       {
         title: "Sports Equiments",
-        path: "/sportsandoutdoor/sportsequipments"
+        path: "/sportsandoutdoor/sportsequipments",
       },
       {
         title: "Gym Equiments",
-        path: "/sportsandoutdoor/gymequipments"
-      }
-    ]
+        path: "/sportsandoutdoor/gymequipments",
+      },
+    ],
   },
 
   {
@@ -122,172 +122,167 @@ export const SidebarData = [
     icon: <AiIcons.AiOutlineLaptop />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
-   
+
     subNav: [
       {
         title: "Books",
-        path: "/stationaryandacademicsupplies/books"
+        path: "/stationaryandacademicsupplies/books",
       },
       {
         title: "Bags",
-        path: "/stationaryandacademicsupplies/bags"
+        path: "/stationaryandacademicsupplies/bags",
       },
       {
         title: "Labcoat",
-        path: "/stationaryandacademicsupplies/labcoat"
+        path: "/stationaryandacademicsupplies/labcoat",
       },
       {
         title: "Calculator",
-        path: "/stationaryandacademicsupplies/calculator"
+        path: "/stationaryandacademicsupplies/calculator",
       },
       {
         title: "Drawing and Civil",
-        path: "/stationaryandacademicsupplies/drawingandcivil"
+        path: "/stationaryandacademicsupplies/drawingandcivil",
       },
       {
         title: "Umbrella",
-        path: "/stationaryandacademicsupplies/umbrella"
+        path: "/stationaryandacademicsupplies/umbrella",
       },
       {
         title: "Others",
-        path: "/stationaryandacademicsupplies/others"
+        path: "/stationaryandacademicsupplies/others",
       },
-    ]
-    },
-    {
-      title: "Clothing and Footwear",
-      path: "/clothingandfootwear",
-      icon: <AiIcons.AiOutlineLaptop />,
-      iconClosed: <RiIcons.RiArrowDownSFill />,
-      iconOpened: <RiIcons.RiArrowUpSFill />,
+    ],
+  },
+  {
+    title: "Clothing and Footwear",
+    path: "/clothingandfootwear",
+    icon: <AiIcons.AiOutlineLaptop />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
 
-      subNav: [
-        {
-          title: "Dresses",
-          path: "/clothingandfootwear/dressess"
-        },
-        {
-          title: "T-shirts and Shirts",
-          path: "/clothingandfootwear/tshirtsandshirts"
-        },
-        {
-          title: "Jeans and demins",
-          path: "/clothingandfootwear/jeansanddenims"
-        },
-        {
-          title: "Jackets",
-          path: "/clothingandfootwear/jackets"
-        },
-        {
-          title: "Shorts",
-          path: "/clothingandfootwear/shorts"
-        },
-        {
-          title: "Skirts",
-          path: "/clothingandfootwear/skirts"
-        },
-        {
-          title: "Sweater and Sweatshirts",
-          path: "/clothingandfootwear/sweaterandsweatshirts"
-        },
-        {
-          title: "Formals",
-          path: "/clothingandfootwear/formals"
-        },
-        {
-          title: "Ethnic Wear",
-          path: "/clothingandfootwear/ethnicwear"
-        },
-        {
-          title: "Sports Apparel",
-          path: "/clothingandfootwear/sports apparel"
-        },
-        {
-          title: " Flipflops and Flats",
-          path: "/clothingandfootwear/flipflopsandflats"
-        },
-        {
-          title: "Heels",
-          path: "/clothingandfootwear/heels"
-        },
-        {
-          title: "Shoes",
-          path: "/clothingandfootwear/shoes"
-        },  
-      ]
-    },
-    {
-      title: "Fashion Accessories",
-      path: "/fashionaccessories",
-      icon: <AiIcons.AiOutlineLaptop />,
-      iconClosed: <RiIcons.RiArrowDownSFill />,
-      iconOpened: <RiIcons.RiArrowUpSFill />,
+    subNav: [
+      {
+        title: "Dresses",
+        path: "/products/women",
+      },
+      {
+        title: "T-shirts and Shirts",
+        path: "/clothingandfootwear/tshirtsandshirts",
+      },
+      {
+        title: "Jeans and demins",
+        path: "/clothingandfootwear/jeansanddenims",
+      },
+      {
+        title: "Jackets",
+        path: "/clothingandfootwear/jackets",
+      },
+      {
+        title: "Shorts",
+        path: "/clothingandfootwear/shorts",
+      },
+      {
+        title: "Skirts",
+        path: "/clothingandfootwear/skirts",
+      },
+      {
+        title: "Sweater and Sweatshirts",
+        path: "/clothingandfootwear/sweaterandsweatshirts",
+      },
+      {
+        title: "Formals",
+        path: "/clothingandfootwear/formals",
+      },
+      {
+        title: "Ethnic Wear",
+        path: "/clothingandfootwear/ethnicwear",
+      },
+      {
+        title: "Sports Apparel",
+        path: "/clothingandfootwear/sports apparel",
+      },
+      {
+        title: " Flipflops and Flats",
+        path: "/clothingandfootwear/flipflopsandflats",
+      },
+      {
+        title: "Heels",
+        path: "/clothingandfootwear/heels",
+      },
+      {
+        title: "Shoes",
+        path: "/clothingandfootwear/shoes",
+      },
+    ],
+  },
+  {
+    title: "Fashion Accessories",
+    path: "/fashionaccessories",
+    icon: <AiIcons.AiOutlineLaptop />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
 
-      
     subNav: [
       {
         title: "Jewellery",
-        path: "/fashionaccessories/jewellery"
+        path: "/fashionaccessories/jewellery",
       },
       {
         title: "Wallets and Clutches",
-        path: "/fashionaccessories/walletsandclutches"
+        path: "/fashionaccessories/walletsandclutches",
       },
       {
         title: "Watches",
-        path: "/fashionaccessories/watches"
+        path: "/fashionaccessories/watches",
       },
       {
         title: "Belts and Tie",
-        path: "/fashionaccessories/beltsandtie"
+        path: "/fashionaccessories/beltsandtie",
       },
       {
         title: "Hand bags",
-        path: "/fashionaccessories/handbags"
+        path: "/fashionaccessories/handbags",
       },
       {
         title: "Sunglasses",
-        path: "/fashionaccessories/sunglasses"
+        path: "/fashionaccessories/sunglasses",
       },
       {
         title: "Hair Accessories",
-        path: "/fashionaccessories/hairaccessories"
+        path: "/fashionaccessories/hairaccessories",
       },
       {
         title: "Caps and Hats",
-        path: "/fashionaccessories/capsandhats"
+        path: "/fashionaccessories/capsandhats",
       },
       {
         title: "Scarves and Gloves",
-        path: "/fashionaccessories/scarvesandgloves"
+        path: "/fashionaccessories/scarvesandgloves",
       },
       {
         title: "Phone Accessories",
-        path: "/fashionaccessories/phoneaccessories"
+        path: "/fashionaccessories/phoneaccessories",
       },
       {
         title: "Others",
-        path: "/fashionaccessories/others"
+        path: "/fashionaccessories/others",
       },
-    ]
+    ],
+  },
 
-    },
+  {
+    title: "Recreational",
+    path: "/recreational",
+    icon: <AiIcons.AiOutlineLaptop />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
 
-    {
-      title: "Recreational",
-      path: "/recreational",
-      icon: <AiIcons.AiOutlineLaptop />,
-      iconClosed: <RiIcons.RiArrowDownSFill />,
-      iconOpened: <RiIcons.RiArrowUpSFill />,
-
-      
     subNav: [
       {
         title: "Novels",
-        path: "/recreational/novels"
+        path: "/recreational/novels",
       },
-    ]
-  }
-
-
+    ],
+  },
 ];

@@ -2,9 +2,11 @@ import Featured from "../body/home/featured";
 import CardList from "../body/home/cardList";
 import Sidebar from "../body/home/Sidebar";
 import React from "react";
+import { useLocation } from "react-router-dom";
 
-function allProducts() {
-  let category = null;
+function AllProducts() {
+  const location = useLocation();
+  const category = location.pathname.split("/")[2];
   return (
     <div>
       <Sidebar />
@@ -14,4 +16,4 @@ function allProducts() {
   );
 }
 
-export default allProducts;
+export default AllProducts;

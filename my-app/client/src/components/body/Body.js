@@ -9,6 +9,7 @@ import ResetPass from "../body/auth/ResetPassword";
 import Profile from "../body/profile/Profile";
 import Home from "../body/home/Home";
 import AllProducts from "../productpage/allProducts";
+import Product from "../productpage/ProductPage";
 import { useSelector } from "react-redux";
 
 function Body() {
@@ -78,6 +79,8 @@ function Body() {
       />
 
       <Route path="/products" element={<AllProducts />} exact />
+      <Route exact path="/products/:category" element={<AllProducts />} />
+      <Route exact path="/product/:id" element={<Product />} />
     </Routes>
   );
 }
