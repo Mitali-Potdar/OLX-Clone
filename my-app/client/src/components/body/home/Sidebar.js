@@ -56,7 +56,7 @@ const Sidebar = () => {
     <div>
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
-          <NavIcon to='/Explore'>
+          <NavIcon to ='/'>
             <FaIcons.FaShoppingCart onClick={showSidebar} />
           </NavIcon>
         </Nav>
